@@ -1,0 +1,46 @@
+@import '/src/app/mixins/variables'
+
+.search-form
+    max-width: 50%
+
+    margin: auto
+    display: grid
+    grid-template-areas: "search btn"
+    grid-template-columns: 1fr auto
+
+    &__search
+        width: 100%
+        min-height: 3rem
+
+        grid-area: search
+
+        background-color: $secondary-background-color
+        color: $primary-color
+
+        outline: none
+        border: .1rem solid $primary-color
+        border-top-left-radius: $border-radius
+        border-bottom-left-radius: $border-radius
+
+    &__btn-search
+        min-width: 4rem
+
+        grid-area: btn
+
+        background-color: $primary-color
+
+        border: none
+        border-top-right-radius: $border-radius
+        border-bottom-right-radius: $border-radius
+
+        cursor: pointer
+
+    &__icon
+        color: $secondary-background-color
+
+@media screen and (max-width: 1200px)
+    .search-form
+        max-width: 90%
+
+        &--mt
+            margin-top: 5rem
