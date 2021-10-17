@@ -1,0 +1,99 @@
+.section-tasks
+    @include box-shadow
+
+    &--dark-theme
+        background-color: $secondary-background-color
+
+    .header-task
+        display: flex
+        justify-content: start
+        align-items: center
+
+    &__header-task
+        height: 3rem
+        padding-left: 1rem
+        background-color: $selector-background-color
+
+    .main-tasks
+        display: grid
+
+        grid-template-areas: "text btn"
+        grid-template-columns: 1fr auto
+
+        &__list
+            padding: 0
+            margin: 0
+
+        .task
+            grid-area: text
+
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            &__btn
+                min-width: 3rem
+                min-height: 3rem
+                margin-left: 1rem
+
+                grid-area: btn
+
+                background-color: $primary-color
+
+                border: none
+                border-radius: 0.2rem
+
+                cursor: pointer
+
+            &__icon
+                color: $secondary-background-color
+
+        &__task
+            height: 3rem
+
+            padding:
+                left: 1rem
+                right: .5rem
+                top: .5rem
+                bottom: .5rem
+            margin-bottom: 1rem
+
+            border: .1rem solid $primary-color
+            border-radius: 0.2rem
+
+    &__main-task
+        margin-top: 1rem
+
+    .footer-task
+        display: grid
+
+        grid-template-areas: "input btn"
+        grid-template-columns: 1fr auto
+
+        &__input
+            width: 100%
+            height: 3rem
+
+            grid-area: input
+
+            background-color: $secondary-background-color
+            color: $primary-color
+
+            outline: none
+            border: .1rem solid $primary-color
+            border-radius: .2rem
+
+        &__btn
+            min-width: 4rem
+
+            grid-area: btn
+
+            background-color: $primary-color
+
+            border: none
+            border-radius: 0.2rem
+
+            cursor: pointer
+
+        &__icon
+            color: $secondary-background-color
