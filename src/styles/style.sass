@@ -1,6 +1,9 @@
+//иконки подключают через html, твой подход хуже, т.к. блокирует дальнейшую загрузку сайта на этой строке
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons')
 
+//а если бы использовал мой frontend-starter то можно @import '~normalize.css'
+//и что хуже, у тебя в скомпиленном style.css так и вставился как @import, а не подгрузил код файла в общий файл
 @import '../../node_modules/normalize.css/normalize.css'
 
 @import './mixins/mixins'

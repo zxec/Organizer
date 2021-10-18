@@ -1,14 +1,15 @@
 .wrapper
-    min-width: 100%
+    min-width: 100% // зачем?
     min-height: 100vh
 
-    position: absolute
+    position: absolute // зачем?
 
     background-color: $primary-background-color
 
+    //нельзя вкладывать блоки в блоки в css, достаточно было написать .page, а у тебя стили применяются по .wrapper .page, это некорректно с точки зрения БЭМ
     .page
         min-height: 100vh
-        max-width: 1920px
+        max-width: 1920px // код стайл с отбивкой пустыми строками сомнителен, я понимаю что ты разделяешь так стили по смыслу, но при работе в команде так не получится делать, т.к. это не общепринятый подход
 
         margin: auto
 
@@ -16,17 +17,20 @@
         grid-template-areas: "header header" "main tasks"
         align-items: center
 
+        // неверно, эти стили должны быть у body под каким-то классом и точно без модификатора, лишняя вложенность
         &--font-theme
             font-family: $primary-font-family
             font-size: $primary-font-size
             color: $primary-color
 
+        //    а здесь вообще путь .wrapper .page .header, хотя достаточно было .header, далее по коду одна и та же эта ошибка
         .header
             grid-area: header
 
         .main
             width: 100%
 
+            //неверное свойство, IDE ругается
             grid: main
 
             display: flex

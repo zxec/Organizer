@@ -1,36 +1,46 @@
+<!--doctype забыл-->
+<!--<html> забыл-->
 <head>
     <meta charset="utf-8">
     <title>Organizer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="src/styles/style.css">
+
+<!--    а где сама иконка?-->
     <link rel="icon" type="image/x-icon">
 </head>
 
 <body>
-
+<!--в коде встречается много лишних пустых строк, которые не несут смысловой нагрузки, не делают форматирование лучше-->
     <div class="wrapper">
         <div class="page page--font-theme">
 
             <header class="header">
 
+<!--                search-form--mt неверно выбран подход для задания внешних отступов, margin задаётся элементам внутри блока-->
                 <form class="search-form search-form--mt">
 
+<!--                    не хватает padding у input -->
                     <input class="search-form__search" type="text" placeholder="Search tasks..."
                         aria-label="Search tasks">
                     <button class="search-form__btn-search" type="submit">
                         <span class="material-icons search-form__icon">search</span>
                     </button>
-
                 </form>
 
             </header>
 
             <main class="main">
 
+<!--                совсем не понимаю зачем тебе писать свой кастомный календарь, но если делаешь это, то обязательно чекай хорошие исходники существующих календарей
+в частности их разметку
+-->
                 <div class="calendar calendar--dark-theme">
                     <div class="selector selector--dark-theme">
+<!--                        это кнопки button влево/вправо + они прыгают при наведении-->
                         <span class="material-icons selector__icon">arrow_left</span>
                         <div class="date">
+<!--                            это кнопка, которая открывает выбор месяца/года-->
                             <h1>October 2021</h1>
                         </div>
                         <span class="material-icons selector__icon">arrow_right</span>
@@ -93,11 +103,12 @@
                         Date: 30 October 2021
                     </header>
 
+<!--                    main,footer выглядит так как будто пропущен padding -->
                     <main class="main-tasks section-tasks__main-task">
                         <ul class="main-tasks__list">
-
                             <li class="task main-tasks__task">
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?</span>
+<!--                                пропущен type-->
                                 <button class="task__btn">
                                     <span class="material-icons task__icon">
                                         delete
@@ -115,7 +126,16 @@
                             </li>
 
                             <li class="task main-tasks__task">
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                                </span>
                                 <button class="task__btn">
                                     <span class="material-icons task__icon">
                                         delete
@@ -126,6 +146,8 @@
                         </ul>
                     </main>
 
+<!--                    форма сильно похожа по стилям на поиск, тот самый случай когда надо было использовать общий блок классов,-->
+<!--                    но с модификатором, который изменяет внешний вид до которого ты хочешь-->
                     <footer>
                         <form class="footer-task">
                             <input class="footer-task__input" type="text">
