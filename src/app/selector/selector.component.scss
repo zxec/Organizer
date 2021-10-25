@@ -1,0 +1,25 @@
+@import '../mixins/mixins';
+
+.selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: (4 * $padding-10) 5px 0 5px;
+    background-color: $third-color;
+
+    &__year {
+        font-size: 24px;
+    }
+
+    &__icon {
+        line-height: 40px;
+        font-size: 32px;
+        cursor: pointer;
+        transition: all 250ms;
+    }
+
+    &__icon:hover {
+        opacity: 0.5;
+    }
+}

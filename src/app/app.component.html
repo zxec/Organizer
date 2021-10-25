@@ -1,17 +1,13 @@
-<div class="wrapper">
-    <div class="page page--font-theme">
-
-        <header class="header">
-            <app-search></app-search>
-        </header>
-
-        <main class="main">
+<div class="page">
+    <header class="page__header">
+        <app-title></app-title>
+    </header>
+    <main class="main page__main">
+        <div class="main__container">
+            <app-selector></app-selector>
             <app-calendar></app-calendar>
-        </main>
-
-        <div class="tasks">
-            <app-task></app-task>
+            <app-input></app-input>
         </div>
-
-    </div>
+        <app-tasks-board></app-tasks-board>
+    </main>
 </div>

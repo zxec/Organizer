@@ -1,0 +1,38 @@
+@import './mixins/mixins';
+
+.page {
+    width: 100%;
+    position: absolute;
+    background: $secondary-color;
+    font-size: $primary-font-size;
+    color: $primary-color;
+    
+    &__header {
+        text-align: center;
+    }
+
+    &__main {
+        max-width: 400px;
+        margin: auto;
+        display: grid;
+        padding: $padding-10;
+        cursor: default;
+    }
+}
+
+.main {
+    &__container {
+        background-color: $background-color-calendar;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .page {
+        height: 100vh;
+
+        &__main {
+            grid-template-columns: 2fr 2fr;
+            max-width: 800px;
+        }
+    }
+}
