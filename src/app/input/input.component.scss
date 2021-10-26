@@ -10,6 +10,7 @@
         background-color: $primary-color;
     }
 
+    // неверное применение БЭМ, это стили блока, а не элемента
     &__input {
         width: 100%;
         border: none;

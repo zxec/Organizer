@@ -1,12 +1,15 @@
+//плохо подключаешь миксины
+//есть способ лучше
+//https://tyapk.ru/blog/post/scss-import-in-angular
 @import './mixins/mixins';
 
 .page {
     width: 100%;
-    position: absolute;
+    position: absolute; // это ещё зачем? таким образом ты выдираешь страницу из стандартного потока страницы, это критично и некорректно
     background: $secondary-color;
     font-size: $primary-font-size;
     color: $primary-color;
-    
+
     &__header {
         text-align: center;
     }

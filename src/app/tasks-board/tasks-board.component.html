@@ -1,4 +1,6 @@
 <div class="task-board">
+<!--    вот здесь как раз есть смысл создать отдельный компонент app-task, т.к. каждый такой компонент можно будет удалить в отдельности-->
+<!--  разделение компонентов листа и отдельного элемента это стандартная практика, т.к. задачи таких компонентов в корне отличаются-->
     <div class="task-board__task">
         <div class="task-board__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium id modi, atque voluptate dicta
@@ -11,6 +13,7 @@
             est reiciendis debitis id!
         </div>
         <button class="task-board__btn" type="submit">
+<!--            стандартной практикой считается использование тега <i> для иконок, span писать дольше-->
             <span class="material-icons btn__icon">remove_circle_outline</span>
         </button>
     </div>

@@ -1,3 +1,27 @@
+/**
+  В целом идея понятная, ты собрал все переменные в один файл, но есть способ лучше, надо было использовать css variables
+  например тебе надо сделать кнопку
+  .button {
+    background: var(--button-bg-color, #000);
+    color: var(--button-color, #fff);
+  }
+  соответственно если тебе надо переопределить цвета кнопки далее ты добавляешь в сборку файлик overrides.scss и там пишешь
+  :root {
+    --button-bg-color: blue;
+    --button-color: red;
+  }
+  этот способ лучше, т.к. не требует собирать все цвета воедино, если есть общие цвета сайта, то добавится ещё файлик variables.scss
+  как у тебя, но там не будет scss переменных, будут тоже css variables
+  :root {
+    --primary-color: green;
+    --container-bg-color: #f90
+  }
+  также раз у тебя есть цветовая схема через css переменные саму кнопку можно уже описать например так
+  .button {
+    background: var(--button-bg-color, var(--container-bg-color));
+    color: var(--button-color, var(--inverse-color));
+  }
+ */
 $primary-color: #eee;
 $secondary-color: #12121f;
 $third-color: #167e56;
@@ -8,7 +32,7 @@ $background-color-task: #167e56;
 $font-family: 'Lato', sans-serif;
 $primary-font-size: 16px;
 $secondary-font-size: 10px;
-$font-size-title: 28px;
+$font-size-title: 28px; // определись с неймингом, этот отличается от двух переменных выше
 
-$padding-10: 10px;
+$padding-10: 10px; // это плохое имя класса, по хорошему лучше назвать что-то вроде $offset, а не указывать конкретную цифру в имени
 $border: 2px solid #333;

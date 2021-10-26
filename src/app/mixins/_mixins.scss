@@ -4,5 +4,5 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    height: 38px;
+    height: 38px; // плохое предположение, кол-во текста в кнопках может быть много, лучше min-height, ещё лучше через padding
 }
