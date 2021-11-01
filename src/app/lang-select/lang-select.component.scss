@@ -1,0 +1,16 @@
+@import "mixins";
+@import "variables";
+
+.btn {
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: $primary-color;
+
+    &--left {
+        border-bottom-left-radius: 10px;
+    }
+    &--right {     
+        border-bottom-right-radius: 10px;
+    }
+}

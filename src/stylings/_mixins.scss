@@ -1,8 +1,8 @@
-@import './variables';
+@import "variables";
 
 @mixin btn {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    height: 38px;
+    padding: $offset;
 }

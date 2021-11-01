@@ -1,0 +1,35 @@
+@import "mixins";
+@import "variables";
+
+.task {  
+    border: $border;
+    background-color: $primary-color;
+
+    &__text {
+        padding: $offset;
+    }
+}
+
+.tasks-board__task {
+    display: flex;
+    align-items: center;
+    padding: $offset;
+}
+
+.text {
+    color: $secondary-color;
+    outline: none;
+}
+
+.btn {
+    @include btn;
+}
+
+.icon {
+    color: $secondary-color;
+    transition: all 250ms;
+}
+
+.icon:hover {
+    color: $third-color;
+}

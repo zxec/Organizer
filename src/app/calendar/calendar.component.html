@@ -1,90 +1,92 @@
 <div class="calendar">
+    <app-selector></app-selector>
+
     <table class="table calendar__table">
         <tbody>
             <tr>
-                <td class="table__month">Jan</td>
-                <td class="table__month">Feb</td>
-                <td class="table__month">Mar</td>
-                <td class="table__month">Apr</td>
-                <td class="table__month">May</td>
-                <td class="table__month">Jun</td>
-                <td class="table__month">Jul</td>
-                <td class="table__month">Aug</td>
-                <td class="table__month">Sep</td>
-                <td class="table__month table__month--active">Oct</td>
-                <td class="table__month">Nov</td>
-                <td class="table__month">Dec</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.JAN' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.FEB' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.MAR' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.APR' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.MAY' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.JUN' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.JUL' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.AUG' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.SEP' | translate }}</td>
+                <td class="month table__month table__month--active">{{ 'CALENDAR.MONTH.OCT' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.NOV' | translate }}</td>
+                <td class="month table__month">{{ 'CALENDAR.MONTH.DEC' | translate }}</td>
             </tr>
         </tbody>
     </table>
     <table class="table calendar__table">
         <tbody>
             <tr>
-                <td class="table__week-day">Sun</td>
-                <td class="table__week-day">Mon</td>
-                <td class="table__week-day">Tue</td>
-                <td class="table__week-day">Wed</td>
-                <td class="table__week-day">Thu</td>
-                <td class="table__week-day">Fri</td>
-                <td class="table__week-day">Sat</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.MON' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.TUE' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.WED' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.THU' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.FRI' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.SAT' | translate }}</td>
+                <td class="week-day table__week-day">{{ 'CALENDAR.WEEK.SUN' | translate }}</td>
             </tr>
         </tbody>
     </table>
     <table class="table calendar__table">
         <tbody>
             <tr>
-                <td class="table__day table__day--other-month">26</td>
-                <td class="table__day table__day--other-month">27</td>
-                <td class="table__day table__day--other-month">28</td>
-                <td class="table__day table__day--other-month">29</td>
-                <td class="table__day table__day--other-month">30</td>
-                <td class="table__day">1</td>
-                <td class="table__day">2</td>
+                <td class="day table__day table__day--other-month">26</td>
+                <td class="day table__day table__day--other-month">27</td>
+                <td class="day table__day table__day--other-month">28</td>
+                <td class="day table__day table__day--other-month">29</td>
+                <td class="day table__day table__day--other-month">30</td>
+                <td class="day table__day">1</td>
+                <td class="day table__day">2</td>
             </tr>
-            <tr class="days-row">
-                <td class="table__day">3</td>
-                <td class="table__day">4</td>
-                <td class="table__day">5</td>
-                <td class="table__day">6</td>
-                <td class="table__day table__day--active">7</td>
-                <td class="table__day">8</td>
-                <td class="table__day table__day--task-day">9</td>
+            <tr>
+                <td class="day table__day">3</td>
+                <td class="day table__day">4</td>
+                <td class="day table__day">5</td>
+                <td class="day table__day">6</td>
+                <td class="day table__day table__day--active">7</td>
+                <td class="day table__day">8</td>
+                <td class="day table__day table__day--task-day">9</td>
             </tr>
-            <tr class="days-row">
-                <td class="table__day">10</td>
-                <td class="table__day">11</td>
-                <td class="table__day">12</td>
-                <td class="table__day">13</td>
-                <td class="table__day">14</td>
-                <td class="table__day">15</td>
-                <td class="table__day">16</td>
+            <tr>
+                <td class="day table__day">10</td>
+                <td class="day table__day">11</td>
+                <td class="day table__day">12</td>
+                <td class="day table__day">13</td>
+                <td class="day table__day">14</td>
+                <td class="day table__day">15</td>
+                <td class="day table__day">16</td>
             </tr>
-            <tr class="days-row">
-                <td class="table__day">17</td>
-                <td class="table__day">18</td>
-                <td class="table__day">19</td>
-                <td class="table__day">20</td>
-                <td class="table__day">21</td>
-                <td class="table__day">22</td>
-                <td class="table__day">23</td>
+            <tr>
+                <td class="day table__day">17</td>
+                <td class="day table__day">18</td>
+                <td class="day table__day">19</td>
+                <td class="day table__day">20</td>
+                <td class="day table__day">21</td>
+                <td class="day table__day">22</td>
+                <td class="day table__day">23</td>
             </tr>
-            <tr class="days-row">
-                <td class="table__day">24</td>
-                <td class="table__day">25</td>
-                <td class="table__day">26</td>
-                <td class="table__day">27</td>
-                <td class="table__day">28</td>
-                <td class="table__day">29</td>
-                <td class="table__day">30</td>
+            <tr>
+                <td class="day table__day">24</td>
+                <td class="day table__day">25</td>
+                <td class="day table__day">26</td>
+                <td class="day table__day">27</td>
+                <td class="day table__day">28</td>
+                <td class="day table__day">29</td>
+                <td class="day table__day">30</td>
             </tr>
-            <tr class="days-row">
-                <td class="table__day">31</td>
-                <td class="table__day table__day--other-month">1</td>
-                <td class="table__day table__day--other-month">2</td>
-                <td class="table__day table__day--other-month">3</td>
-                <td class="table__day table__day--other-month">4</td>
-                <td class="table__day table__day--other-month">5</td>
-                <td class="table__day table__day--other-month">6</td>
+            <tr>
+                <td class="day table__day">31</td>
+                <td class="day table__day table__day--other-month">1</td>
+                <td class="day table__day table__day--other-month">2</td>
+                <td class="day table__day table__day--other-month">3</td>
+                <td class="day table__day table__day--other-month">4</td>
+                <td class="day table__day table__day--other-month">5</td>
+                <td class="day table__day table__day--other-month">6</td>
             </tr>
         </tbody>
     </table>

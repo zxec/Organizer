@@ -1,44 +1,23 @@
-@import '../mixins/mixins';
+@import "mixins";
+@import "variables";
 
 .task-board {
-    background-color: $background-color-task; 
-    padding: $padding-10;
+    background-color: $background-color-task;
+}
+
+.main__task-board {
+    padding: $offset;
     display: grid;
     grid-row-gap: 10px;
-
-    &__task {
-        padding: $padding-10;
-        border: $border;
-        display: flex;
-        align-items: center;
-        background-color: $primary-color;
-    }
-
-    &__text {
-        width: 100%;
-        padding: $padding-10;
-        color: $secondary-color;
-    }
-
-    &__btn {
-        @include btn;
-    }
 }
 
 .btn {
-    &__icon {
-        color: $secondary-color;
-        transition: all 250ms;
-    }
-
-    &__icon:hover {
-        color: $third-color;
-    }
+    @include btn;
+    background-color: $background-color-calendar;
+    color: $primary-color;
+    transition: all 250ms;
 }
 
-@media screen and (min-width: 650px) {
-    .task-board {
-        height: 530px;
-        overflow-y: scroll;
-    }
+.btn:hover {
+    color: $third-color;
 }

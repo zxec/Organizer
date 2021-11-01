@@ -1,25 +1,29 @@
-@import '../mixins/mixins';
+@import "mixins";
+@import "variables";
 
 .selector {
+    background-color: $third-color;
+    text-align: center;
+}
+
+.calendar__selector {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: (4 * $padding-10) 5px 0 5px;
-    background-color: $third-color;
+    padding: (4 * $offset) $offset 0 $offset;
+}
 
-    &__year {
-        font-size: 24px;
-    }
+.icon {
+    line-height: 40px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 250ms;
+}
 
-    &__icon {
-        line-height: 40px;
-        font-size: 32px;
-        cursor: pointer;
-        transition: all 250ms;
-    }
+.icon:hover {
+    opacity: 0.5;
+}
 
-    &__icon:hover {
-        opacity: 0.5;
-    }
+.year {
+    font-size: 24px;
 }

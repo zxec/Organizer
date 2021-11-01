@@ -1,47 +1,71 @@
-@import '../mixins/mixins';
+@import "mixins";
+@import "variables";
 
 .calendar {
-    &__table {
-        width: 100%;
-        padding: 0 $padding-10;
+    background-color: $background-color-calendar;
+    
+    &__table { 
+        padding: 0 $offset;
     }
 }
 
+.month {
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: $secondary-font-size;
+    transition: all 250ms;
+    opacity: 0.3;
+}
+
+.month:hover {
+    color: $third-color;
+    opacity: 1;
+}
+
+.week-day {
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: $secondary-font-size;
+}
+
+.day {
+    line-height: 26px;
+    text-align: center;
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    transition: all 250ms;
+}
+
+.day:hover {
+    border-color: $third-color;
+    opacity: 1;
+}
+
 .table {
+    width: 100%;
+
     &__month {
-        padding: $padding-10 2px 0 2px;
-        line-height: 26px;
-        text-transform: uppercase;
-        font-size: $secondary-font-size;
-        transition: all 250ms;
-        opacity: 0.3;
+        padding-top: $offset;
 
         &--active {
             opacity: 1;
         }
     }
 
-    &__month:hover {
-        color: $third-color;
-        opacity: 1;
-    }
-
     &__week-day {
-        border: 2px solid transparent;
-        padding: 0 $padding-10;
-        line-height: 26px;
-        text-transform: uppercase;
-        font-size: $secondary-font-size;
+        padding: 0 $offset;
     }
 
     &__day {
-        line-height: 26px;
-        text-align: center;
-        height: 26px;
-        width: 26px;
-        padding: $padding-10;
-        border: 2px solid transparent;
-        transition: all 250ms;
+        padding: $offset;
 
         &--other-month {
             opacity: 0.3;
@@ -60,9 +84,20 @@
             background: $third-color;
         }
     }
+}
 
-    &__day:hover {
-        border-color: $third-color;
-        opacity: 1;
+@media screen and (min-width: 800px) {
+    .table {
+        &__month {
+            padding-top: 2 * $offset;
+        }
+
+        &__week-day {
+            padding: 2 * $offset $offset;
+        }
+
+        &__day {
+            padding: 2 * $offset $offset;
+        }
     }
 }
