@@ -7,8 +7,8 @@
     grid-template-columns: 1fr auto
 
     &__search
-        width: 100%
-        min-height: 3rem
+        width: 100% // что даёт?
+        min-height: 3rem // почему не height?
 
         grid-area: search
 
@@ -17,6 +17,7 @@
 
         outline: none
         border: .1rem solid $primary-color
+        // border-radius: $border-radius 0 0 $border-radius
         border-top-left-radius: $border-radius
         border-bottom-left-radius: $border-radius
 

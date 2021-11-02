@@ -32,6 +32,8 @@
             align-items: center
 
             &__btn
+                //здесь и далее вижу применение rem единиц, с какой целью?
+                // ты планируешь поддерживать изменение размера шрифта пользователем без использования браузерной фичи?
                 min-width: 3rem
                 min-height: 3rem
                 margin-left: 1rem
@@ -49,8 +51,10 @@
                 color: $secondary-background-color
 
         &__task
+            //так нельзя, контента может быть очень много, смотри в браузере
             height: 3rem
 
+            //не понял зачем, можно написать padding: .5rem .5rem .5rem 1rem
             padding:
                 left: 1rem
                 right: .5rem
