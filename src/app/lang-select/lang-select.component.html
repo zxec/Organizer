@@ -1,4 +1,6 @@
+<!--Даже назвал Lang-select, а использовал <button>, пора разобраться с ReactiveFormsModule и использовать <select [formControl]>-->
 <div class="lang-select">
     <button class="btn btn--left" type="button" (click)="translate.use('en')">EN</button>
     <button class="btn btn--right" type="button" (click)="translate.use('ru')">RU</button>
+<!--  лучше будет eng/рус, так стандартнее + дать им стили text-transform: uppercase, ещё лучше вообще не сокращать-->
 </div>
